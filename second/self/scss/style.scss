@@ -1,0 +1,78 @@
+@use 'sass:math';
+
+@function rem($px){
+    @return math.div($px, 16px) * 1rem;
+}
+
+$colorA : #DA5252;
+$colorB : #3A8EDC;
+$colorC : #2FFEA0;
+$colorD : #FFC700;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+}
+
+.grid-container{
+    margin: 80px auto 0;
+    grid-gap: 20px;
+    display: grid;
+
+    .grid-item{
+        border-radius: 12px;
+        min-height: 160px;
+        &.a{
+            grid-area: a;
+            background-color: $colorA;
+        }
+        &.b{
+            grid-area: b;
+            background-color: $colorB;
+        }
+        &.c{
+            grid-area: c;
+            background-color: $colorC;
+        }
+        &.d{
+            grid-area: d;
+            background-color: $colorC;
+        }
+        &.e{
+            grid-area: e;
+            background-color: $colorD;
+        }
+    }
+
+    @media screen and (max-width: 742px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        width: 300px;
+        grid-template-areas: 
+        "a" "b" "b" "c" "d" "e";
+    }
+
+    @media screen and (min-width: 743px) and (max-width: 1439px){
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 400px;
+        grid-template-areas:
+        "a a" "b c" "b d" "e e";
+    }
+
+    @media screen and (min-width: 1440px){
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 610px;
+        grid-template-areas:
+        "a a a" "b c d" "b e e";
+    }
+}

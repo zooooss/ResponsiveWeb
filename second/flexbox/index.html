@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+            .container{
+                width: 300px;
+                height: 300px;
+                background-color: yellow;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start; /*center, space-between, */
+                align-items: flex-end; /*교차축의 정렬 변화*/
+            }
+            .flex-item{
+                width: 150px;
+                /*flex-basis:*/
+                height: 150px;
+                background-color: blue;
+                border: 5px solid black;
+                color: white;
+            }
+            /*
+            .a {
+                flex-shrink: 1;
+                background-color: purple;
+                order:2;
+            }
+            .b{
+                order:3;
+            }
+            .c{
+                order:1;
+            }
+            /*order를 활용해서 순서를 지정할 수 있음.*/
+            /*-1은 순서 관계 없이 맨 앞으로 감.*/
+            /*order가 같으면? b와 c가 둘 다 2이면 ? 소스상 먼저있는게 더 앞으로!*/
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="flex-item">A</div>
+            <div class="flex-item">B</div>
+            <div class="flex-item">C</div>
+            <div class="flex-item">D</div>
+            <!--오더가 없으면 맨 앞으로 옴-->
+        </div>
+    </body>
+</html>

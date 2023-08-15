@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EM test</title>
+        <meta charset="utf-8">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            ul {
+                font-size: 15px;
+            }
+            ul ul li{
+                font-size: 2em;
+            }
+        </style>
+    </head>
+        <body>
+            <h1>EM test</h1>
+            <ul>
+                <li>첫 번째</li>
+                <li>두 번째</li>
+                <li>세 번째</li>
+                <ul>
+                    <li>changed</li>
+                    <li>changed</li>
+                    <li>changed</li>
+                </ul>
+            </ul>
+        </body>
+</html>
+
+<!--em의 특성을 잘 보여줌
+단순히 이걸 rem 으로 바꾸면 폰트 사이즈가 똑같음.
+이유는 루트 엘리먼트의 폰트사이즈를 가져오기 때문에-->

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1.25rem;
+  grid-template-areas: "sidebar header header corner"
+  "sidebar main1 main2 side"
+  "sidebar main3 main4 side";
+  width: 37.5rem;
+  height: 28.125rem;
+}
+.grid-container .grid-item {
+  color: black;
+}
+.grid-container .grid-item.sidebar {
+  grid-area: sidebar;
+  background-color: skyblue;
+}
+.grid-container .grid-item.header {
+  grid-area: header;
+  background-color: green;
+}
+.grid-container .grid-item.corner {
+  grid-area: corner;
+  background-color: plum;
+}
+.grid-container .grid-item.main1 {
+  grid-area: main1;
+  background-color: purple;
+}
+.grid-container .grid-item.main2 {
+  grid-area: main2;
+  background-color: purple;
+}
+.grid-container .grid-item.main3 {
+  grid-area: main3;
+  background-color: purple;
+}
+.grid-container .grid-item.main4 {
+  grid-area: main4;
+  background-color: purple;
+}
+.grid-container .grid-item.side {
+  grid-area: side;
+  background-color: purple;
+}
+
+/*
+컴파일 하는 법
+Command + shift + P
+Live Sass Compile Current Sass File
+*//*# sourceMappingURL=style.css.map */

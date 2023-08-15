@@ -1,0 +1,61 @@
+@use "sass:math";
+
+@function rem($pxValue){
+    @return math.div($pxValue, 16px) * 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: rem(20px);
+    grid-template-areas: 
+    "sidebar header header corner"
+    "sidebar main1 main2 side"
+    "sidebar main3 main4 side";
+    width: rem(600px);
+    height: rem(450px);
+
+    .grid-item{
+        color: black;
+
+        &.sidebar{
+        grid-area: sidebar;
+        background-color: skyblue;
+        }
+        &.header{
+        grid-area: header;
+        background-color:green;
+        }
+        &.corner{
+        grid-area: corner;
+        background-color:plum;
+        }
+        &.main1{
+        grid-area: main1;
+        background-color:purple;
+        }
+        &.main2{
+            grid-area: main2;
+            background-color:purple;
+            }
+        &.main3{
+            grid-area: main3;
+            background-color:purple;
+            }
+        &.main4{
+            grid-area: main4;
+            background-color:purple;
+            }
+        &.side{
+            grid-area: side;
+            background-color:purple;
+            }
+    }
+}
+
+/*
+컴파일 하는 법
+Command + shift + P
+Live Sass Compile Current Sass File
+*/

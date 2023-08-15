@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>grid-test</title>
+        <meta charset="utf-8">
+        <style>
+            .grid-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                grid-template-areas: 
+                "sidebar header header corner"
+                "sidebar main1 main2 side"
+                "sidebar main3 main4 side";
+                width: 600px;
+                height: 450px;
+            }
+
+        .gird-item{
+                color: black;
+            }
+
+        .sidebar{
+            grid-area: sidebar;
+            background-color: skyblue;
+        }
+        .header{
+            grid-area: header;
+            background-color:green;
+        }
+        .corner{
+            grid-area: corner;
+            background-color:plum;
+        }
+        .main1{
+            grid-area: main1;
+            background-color:purple;
+        }
+        .main2{
+            grid-area: main2;
+            background-color:yellow;
+        }
+        .main3{
+            grid-area: main3;
+            background-color:teal;
+        }
+        .main4{
+            grid-area: main4;
+            background-color:thistle;
+        }
+        .side{
+            grid-area: side;
+            background-color:tomato;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-item sidebar">sidebar</div>
+            <div class="grid-item header">header</div>
+            <div class="grid-item corner">corner</div>
+            <div class="grid-item main1">main1</div>
+            <div class="grid-item main2">main2</div>
+            <div class="grid-item main3">main3</div>
+            <div class="grid-item main4">main4</div>
+            <div class="grid-item side">side</div>
+        </div>
+    </body>
+</html>
